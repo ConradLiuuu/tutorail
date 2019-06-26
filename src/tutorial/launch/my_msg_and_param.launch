@@ -1,0 +1,4 @@
+<launch>
+    <param name = "freq" type = "double" value = "0.5" />
+    <node name = "talker_add_mymsg" pkg = "tutorial" type = "talker_add_mymsg" />
+</launch>
