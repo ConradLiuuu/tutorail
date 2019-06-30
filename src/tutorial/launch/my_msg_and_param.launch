@@ -1,4 +1,5 @@
 <launch>
-    <param name = "freq" type = "double" value = "0.5" />
+    <!--param name = "freq" type = "double" value = "0.5" /-->
+    <rosparam file="$(find tutorial)/config/freq.yaml" command="load" />
     <node name = "talker_add_mymsg" pkg = "tutorial" type = "talker_add_mymsg" />
 </launch>
