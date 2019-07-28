@@ -138,6 +138,7 @@ include_directories(
 add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
 add_executable(talker_add_mymsg src/talker_add_mymsg.cpp)
+add_executable(temperature src/temperature.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -154,6 +155,7 @@ add_executable(talker_add_mymsg src/talker_add_mymsg.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
 target_link_libraries(listener ${catkin_LIBRARIES})
 target_link_libraries(talker_add_mymsg ${catkin_LIBRARIES})
+target_link_libraries(temperature ${catkin_LIBRARIES})
 #   ${catkin_LIBRARIES}
 # )
 
