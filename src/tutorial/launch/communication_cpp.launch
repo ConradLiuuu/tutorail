@@ -1,0 +1,5 @@
+<launch>
+    <param name = "freq_pub_str" type = "double" value = "10.0" />
+    <node name = "talker" pkg = "tutorial" type = "talker" />
+    <node name = "listener" pkg = "tutorial" type = "listener" />
+</launch>

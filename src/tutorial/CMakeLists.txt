@@ -55,11 +55,13 @@ add_message_files(
 )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
+add_service_files(
+  FILES
+  AddTwoInts.srv
+  id.srv
 #   Service1.srv
 #   Service2.srv
-# )
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -139,6 +141,9 @@ add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
 add_executable(talker_add_mymsg src/talker_add_mymsg.cpp)
 add_executable(temperature src/temperature.cpp)
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
+add_executable(add_two_ints_client src/add_two_ints_client.cpp)
+add_executable(student src/student.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -156,6 +161,9 @@ target_link_libraries(talker ${catkin_LIBRARIES})
 target_link_libraries(listener ${catkin_LIBRARIES})
 target_link_libraries(talker_add_mymsg ${catkin_LIBRARIES})
 target_link_libraries(temperature ${catkin_LIBRARIES})
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
+target_link_libraries(student ${catkin_LIBRARIES})
 #   ${catkin_LIBRARIES}
 # )
 

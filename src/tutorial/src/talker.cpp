@@ -12,14 +12,16 @@ private:
   Timer timer_str;
   Timer timer_cnt;
   int cnt;
+  double freq_pub_str;
 
 public:
   Talker()
   {
     cnt = 0;
+    param::get("freq_pub_str", freq_pub_str);
     chatter = nh.advertise<std_msgs::String>("/chatter", 10);
     counter = nh.advertise<std_msgs::UInt8>("/counter", 10);
-    timer_str = nh.createTimer(ros::Duration(1.0 / 5.0),std::bind(&Talker::pub_string, this));
+    timer_str = nh.createTimer(ros::Duration(1.0 / freq_pub_str),std::bind(&Talker::pub_string, this));
     timer_cnt = nh.createTimer(ros::Duration(1.0 / 10.0),std::bind(&Talker::pub_counter, this));
   }
   void pub_string()
