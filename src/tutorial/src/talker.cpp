@@ -2,7 +2,7 @@
 #include "std_msgs/String.h"
 #include "std_msgs/UInt8.h"
 using namespace ros;
-
+/*
 class Talker
 {
 private:
@@ -48,8 +48,8 @@ int main(int argc, char **argv)
   spin();
   return 0;
 }
+*/
 
-/*
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "talker");
@@ -71,4 +71,4 @@ int main(int argc, char **argv)
     }
     return 0;
 }
-*/
+

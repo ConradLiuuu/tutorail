@@ -59,6 +59,7 @@ add_service_files(
   FILES
   AddTwoInts.srv
   id.srv
+  license.srv
 #   Service1.srv
 #   Service2.srv
 )
@@ -140,10 +141,12 @@ include_directories(
 add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
 add_executable(talker_add_mymsg src/talker_add_mymsg.cpp)
-add_executable(temperature src/temperature.cpp)
+#add_executable(temperature src/temperature.cpp)
 add_executable(add_two_ints_server src/add_two_ints_server.cpp)
 add_executable(add_two_ints_client src/add_two_ints_client.cpp)
 add_executable(student src/student.cpp)
+add_executable(brake_server src/brake_server.cpp)
+add_executable(brake_client src/brake_client.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -160,10 +163,12 @@ add_executable(student src/student.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
 target_link_libraries(listener ${catkin_LIBRARIES})
 target_link_libraries(talker_add_mymsg ${catkin_LIBRARIES})
-target_link_libraries(temperature ${catkin_LIBRARIES})
+#target_link_libraries(temperature ${catkin_LIBRARIES})
 target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
 target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 target_link_libraries(student ${catkin_LIBRARIES})
+target_link_libraries(brake_server ${catkin_LIBRARIES})
+target_link_libraries(brake_client ${catkin_LIBRARIES})
 #   ${catkin_LIBRARIES}
 # )
 
